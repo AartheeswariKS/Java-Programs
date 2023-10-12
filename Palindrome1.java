@@ -1,10 +1,11 @@
-package palindrome1;
+ package palindrome1;
 import java.util.Scanner;
 public class Palindrome1
 {
     public static void main(String[] args)
     {
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the input:");
         String str=sc.next();
         int n=str.length();
         char a = 0;
@@ -16,6 +17,7 @@ public class Palindrome1
         for(int i=n-1;i>=0;i--)
         {
             b=str.charAt(i);
+          
         }
 
        if(a==b)
@@ -24,6 +26,8 @@ public class Palindrome1
        }
        else
            System.out.println("Not a palindrome");
+      
+     
        
     }
     
