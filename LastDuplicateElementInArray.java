@@ -1,5 +1,4 @@
 package lastduplicateelementinarray;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -18,7 +17,6 @@ public class LastDuplicateElementInArray
         System.out.println("Elements of Array are:");
         for(int i=0;i<n;i++)
             System.out.println(arr[i]);
-        Arrays.sort(arr);
         HashMap<Integer,Integer> hm=new HashMap<>();
         for(int i=0;i<n;i++)
         {
@@ -36,13 +34,11 @@ public class LastDuplicateElementInArray
             {
               lastindex=e.getValue();
               lastduplicate=e.getKey();    
-            }
-         
+            }    
         }
       System.out.println("The last index:"+lastindex);
       System.out.println("The last duplicate:"+ lastduplicate);
-      
-        
+         
     }
     
 }
