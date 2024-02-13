@@ -35,7 +35,7 @@ public class LastDuplicateElementInArray1
        
         }
         System.out.println(hm);
-        System.out.println(a);
+        System.out.println(a);//returns indices of duplicated elements in the array
     
         int lastindx=0;
         int lastduplicate=0;
