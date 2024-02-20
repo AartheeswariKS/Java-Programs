@@ -3,9 +3,8 @@ import java.util.*;
 import java.util.Arrays;
 
 public class TicTacToe {
-    static String[] board;
-static String turn;
-       
+static String[] board;
+static String turn;       
 static String checkWinner()
 {
 for (int a = 0; a < 8; a++) {
@@ -59,7 +58,7 @@ return "draw";
 
 
 System.out.println(
-turn + "'s turn; enter a slot number to place "
+turn + "'s turn : Enter a slot number to place "
 + turn + " in:");
 return null;
 }
