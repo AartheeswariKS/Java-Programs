@@ -33,7 +33,7 @@ public class MovingAllZerosToEndOfTheArray
         System.out.println("The elements of Array before moving all zeros to the end:\n"+Arrays.toString(arr));
         int res[]=movingAllZerosToEnd(arr);
         System.out.println("The elements of Array after moving all zeros to the end:\n"+Arrays.toString(res));
-    }
-      
+    }      
       
 }
+//O(n^2) Complexity
