@@ -36,7 +36,5 @@ public class MovingAllZerosToEndOptimized
         movingAllZerosToEnd(arr,size);
         System.out.println("The elements of Array after moving all zeros to the end:\n"+Arrays.toString(arr));   
   
-    }
-    
+    }   
 }
-//O(n) complexity
