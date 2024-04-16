@@ -16,32 +16,40 @@ Output:
 hey you
 */
 package casingproblem;
+import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 public class CasingProblem 
 {
+    public static String casedString ( ArrayList<Character> st, String s)
+    {
+                    
+        StringBuilder str = new StringBuilder();
+         for(int i=0;i<s.length();i++)
+        {
+            if(st.isEmpty())
+                st.add(s.charAt(0));
+            if(Character.isUpperCase(s.charAt(i)))
+            {
+                st.add(' ');
+                st.add(Character.toLowerCase(s.charAt(i)));
+            }
+           else
+               st.add(s.charAt(i));
+        }
+        System.out.println("The output string is:");
+        for(int i=2;i<st.size();i++)
+        {
+           str.append(st.get(i));
+        } 
+        return str.toString();
+    }
     public static void main(String[] args) 
     {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the String in Camel Case:");
         String s=sc.next();
-        Stack<Character> st=new Stack<>();
-        for(int i=0;i<s.length();i++)
-        {
-            if(st.isEmpty())
-                st.push(s.charAt(0));
-            if(Character.isUpperCase(s.charAt(i)))
-            {
-                st.push(' ');
-                st.push(Character.toLowerCase(s.charAt(i)));
-            }
-           else
-               st.push(s.charAt(i));
-        }
-        System.out.println("The output string is:");
-        for(int i=2;i<st.size();i++)
-        {
-             System.out.print(st.get(i));
-        } 
+        ArrayList<Character> sa=new ArrayList<>();
+        String str=casedString(sa,s);
+        System.out.println(str);
     }
 }
