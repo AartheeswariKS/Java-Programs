@@ -58,7 +58,11 @@ public class TelephoneDirectoryProblem
                {
                    collision=phnos[i];
                }
-
+                              
+               if(phnos[i].startsWith(phnos[j]) && validphno==1)
+               {
+                   collision=phnos[j];
+               }
             }
         }
        if(validphno==0)
