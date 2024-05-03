@@ -22,24 +22,16 @@ public class EquiArray
     { 
         String s1=String.valueOf(num1);
         String s2=String.valueOf(num2);
-        Character c1[]=new Character[s1.length()];
-        Character c2[]=new Character[s2.length()];
-        for(int i=0;i<c1.length;i++)
-        {
-            c1[i]=s1.charAt(i);
-        }
+        char c1[]=s1.toCharArray();
+        char c2[]=s2.toCharArray();
+        
         if(s1.length()!=s2.length())
             return false;
         else
         {
-            for(int i=0;i<c1.length;i++)
-            {
-                c1[i]=s1.charAt(i);
-                c2[i]=s2.charAt(i);
-            }      
-        }
         Arrays.sort(c1);
         Arrays.sort(c2);
+        }
         if(Arrays.equals(c1, c2))
             return true;
         else
@@ -56,34 +48,29 @@ public class EquiArray
         int arr2[]=new int [n2];
         HashMap<Integer,Integer> hm1=new HashMap<>();
         System.out.println("Enter elements of First Array:");
-        for(int i=0;i<n1;i++)
-        {
+        for(int i=0;i<n1;i++){
            arr1[i]=sc.nextInt();
         }
         System.out.println("Enter elements of Second Array:");
-        for(int i=0;i<n2;i++)
-        {
+        for(int i=0;i<n2;i++){
            arr2[i]=sc.nextInt();
         }
         System.out.println("The elements of First Array are:"+Arrays.toString(arr1));
         System.out.println("The elements of Second Array are:"+Arrays.toString(arr2));
         if(n1!=n2)
             System.out.println("Not an Equi-Array"); 
-        if(n1==n2)
+        else
         {
-           
-            for(int i=0;i<n1;i++)
+            for(int i=0,j=0;i<n1;i++,j++)
             {
-                for(int j=0;j<n2;j++)
-                {
+                    hm1.put(i, null);
                     if(isAnagram(arr1[i],arr2[j]))
                     {
                       hm1.put(i,j);
                     }
-                    else
-                        hm1.put(i,null);
-                }
+                    
             }
+           
         }
        System.out.println(hm1);
        System.out.println("The pairs are:");
@@ -96,7 +83,7 @@ public class EquiArray
                break;
            }
           else
-            System.out.print(e.getKey()+","+e.getValue()+" ");
+            System.out.println(e.getKey()+","+e.getValue()+" ");
        }
     }
     
